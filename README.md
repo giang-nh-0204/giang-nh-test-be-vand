@@ -17,10 +17,10 @@ Thông tin hệ thống api xác thực người dùng và quản lý cửa hàn
         ```
 
     - Tại thư mục dự án chạy lệnh:
-        `composer install` để cài đặt package
-        `php artisan migrate --seed` để tạo các bảng và dữ liệu giả
-        `php artisan passport:install --force` để tạo ra các khóa bảo mật cần thiết của Laravel Passport
-        `php artisan serve` chạy server
+        + `composer install` để cài đặt package
+        + `php artisan migrate --seed` để tạo các bảng và dữ liệu giả
+        + `php artisan passport:install --force` để tạo ra các khóa bảo mật cần thiết của Laravel Passport
+        + `php artisan serve` chạy server
 
 - Danh sách api:
     * User:

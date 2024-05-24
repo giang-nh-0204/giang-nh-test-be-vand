@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::group([
                  'prefix'     => 'user/store',
-                 'middleware' => ['check.auth.header', 'auth:api'],
+                 'middleware' => ['auth:api'],
                  'namespace'  => 'Store',
              ],
     function () {

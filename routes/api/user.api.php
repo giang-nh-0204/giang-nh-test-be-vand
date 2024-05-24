@@ -4,7 +4,7 @@ use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 Route::group([
-                 'prefix'    => '/',
+                 'prefix'    => '',
                  'namespace' => 'User',
              ],
     function () {
@@ -12,13 +12,13 @@ Route::group([
         Route::post('/login', [UserController::class, 'login']);
 
         // Đăng xuất
-        Route::post('/logout', [UserController::class, 'logout'])->middleware('check.auth.header', 'auth:api');
+        Route::post('/logout', [UserController::class, 'logout'])->middleware('auth:api');
     }
 );
 
 Route::group([
                  'prefix'     => 'user',
-                 'middleware' => ['check.auth.header', 'auth:api'],
+                 'middleware' => ['auth:api'],
                  'namespace'  => 'User',
              ],
     function () {
